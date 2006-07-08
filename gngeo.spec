@@ -1,3 +1,5 @@
+#
+# TODO: pl,de translation
 Summary:	A good Neo-Geo emulator
 Name:		gngeo
 Version:	0.6.12
@@ -33,13 +35,11 @@ SDL and optimized assembly CPU emulation cores on i386 platforms.
 %configure
 %{__make}
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
