@@ -1,0 +1,40 @@
+--- gngeo-0.6.12/configure.in	2006-06-12 17:03:00.000000000 +0000
++++ gngeo-0.6.12-ac_patch/configure.in	2006-07-07 16:33:55.744492392 +0000
+@@ -10,13 +10,11 @@
+ # devel version
+ #AM_INIT_AUTOMAKE(gngeo,20060609)
+ 
+-
+-CFLAGS=""
+-
+  #echo $CC
+ 
+ # Checks for programs.
+ AC_PROG_CC
++AM_PROG_AS
+ AC_PROG_RANLIB
+ 
+ #echo $CC
+@@ -209,20 +207,17 @@
+ 		CFLAGS="$CFLAGS -O3 -fstrength-reduce -frerun-loop-opt -Wall -Wno-unused -funroll-loops \
+                     -ffast-math -falign-functions=2 -falign-jumps=2 -fexpensive-optimizations \
+                     -falign-loops=2 -fschedule-insns2 -malign-double -fomit-frame-pointer -g \
+-		    -fno-strict-aliasing -pipe -mtune=$target_cpu -DCPU=$target_cpu"
++		    -fno-strict-aliasing -pipe -DCPU=$target_cpu"
+ 	   else
+ 		CFLAGS="$CFLAGS -O3 -fstrength-reduce -frerun-loop-opt -Wall -Wno-unused -funroll-loops \
+                     -ffast-math -malign-functions=2 -malign-jumps=2 -fexpensive-optimizations \
+                     -malign-loops=2 -fschedule-insns2 -malign-double -fomit-frame-pointer -g \
+-		    -fno-strict-aliasing -pipe -mcpu=$target_cpu -DCPU=$target_cpu"
++		    -fno-strict-aliasing -pipe -DCPU=$target_cpu"
+            fi
+            ;;
+     sparc*) AC_MSG_RESULT(Turning on sparc processor optimisations)
+            AC_DEFINE(PROCESSOR_SPARC, 1, [Define if you have a sparc processor])
+ 	   ALIGNLONGS=1
+-	   if test $target_cpu = sparc64 && test $CC_MAJOR -ge 3 ; then
+-		CFLAGS="$CFLAGS -mcpu=v9"
+-	   fi
+ 	   CFLAGS="$CFLAGS -O3 -Wall -Wno-unused -funroll-loops \
+                     -ffast-math -fomit-frame-pointer -g"
+            ;;
