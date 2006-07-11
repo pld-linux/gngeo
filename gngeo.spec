@@ -1,6 +1,5 @@
-#
-# TODO: de translation
 Summary:	A good Neo-Geo emulator
+Summary(de):	Ein guter Neo-Geo Emulator
 Summary(pl):	Dobry emulator Neo-Geo
 Name:		gngeo
 Version:	0.6.12
@@ -24,6 +23,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 gngeo is a program that emulates the SNK Neo-Geo game system. It uses
 SDL and optimized assembly CPU emulation cores on i386 platforms.
+
+%description -l de
+gngeo ist ein Programm dass das SNK Neo-Geo Spielsystem emuliert. Es
+benutzt SDL und eine in Assembler optimisierte CPU Emulation für i386
+Architekturen.
 
 %description -l pl
 gngeo to program emuluj±cy system gier SNK Neo-Geo. Wykorzystuje SDL i
