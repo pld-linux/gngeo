@@ -1,6 +1,6 @@
 Summary:	A good Neo-Geo emulator
-Summary(de.UTF-8):   Ein guter Neo-Geo Emulator
-Summary(pl.UTF-8):   Dobry emulator Neo-Geo
+Summary(de.UTF-8):	Ein guter Neo-Geo Emulator
+Summary(pl.UTF-8):	Dobry emulator Neo-Geo
 Name:		gngeo
 Version:	0.6.12
 Release:	1
